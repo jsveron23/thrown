@@ -1,6 +1,6 @@
 {
   "name": "thrown",
-  "version": "0.9.0",
+  "version": "0.9.1-beta.0",
   "description": "Generic Error Handler",
   "main": "lib/index.js",
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "rollup --config ./rollup.config.js",
     "prepare": "npm run clean && npm run build",
     "test": "ava",
-    "test:watch": "ava --watch"
+    "test:watch": "ava --watch",
+    "release": "standard-version"
   },
   "keywords": [
     "thrown",
