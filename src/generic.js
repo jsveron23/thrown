@@ -11,7 +11,7 @@ function createError (options) {
   } else if (typeof options === 'object' && !Array.isArray(options)) {
     const { prefix = '' } = options
 
-    _prefix = `${prefix} `
+    _prefix = prefix ? `${prefix} ` : ''
   }
 
   /**
@@ -21,7 +21,7 @@ function createError (options) {
    */
   return (message = 'undefined message', props = {}) => {
     const _msg = `${_prefix}${message}`
-    const _err = new Error(`${_msg}`)
+    const _err = new Error(_msg)
 
     _err.message = _msg
 
