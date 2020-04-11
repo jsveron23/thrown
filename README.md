@@ -1,4 +1,4 @@
-# Thrown
+# thrown
 
 Generic Error handler
 
@@ -52,7 +52,7 @@ function thisIsFunction() {
 // with options : case 3
 function thisIsFunction() {
   try {
-    throw genericError.('this is message', { /* ... */ })
+    throw genericError('this is message', { /* ... */ })
   } catch (err) {
     errorHandler.extra({
       // additional information
@@ -101,7 +101,7 @@ try {
 
     // combine additional information with original error
     handler: (err) => {
-      const computedErr = {
+      const computedErr = {}
 
       return { computedErr }
     }
