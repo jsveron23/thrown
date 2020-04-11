@@ -20,9 +20,9 @@ function createLogger ({
    * @return {String}
    */
   return (title, payload, nativeStack = null) => {
-    const group = expanded ? 'group' : 'groupCollapsed'
+    const _group = expanded ? 'group' : 'groupCollapsed'
 
-    console[group](`%c${name}`, css)
+    console[_group](`%c${name}`, css)
     console.log(`${title}: `, payload)
 
     if (trace && !nativeStack) {

@@ -26,40 +26,40 @@ function createErrorHandler ({
    * @return {Error}
    */
   return (err) => {
-    const message = err.message
-    let additionalErr = {}
+    const _message = err.message
+    let _additionalErr = {}
 
     // only pass here when use `errorHandler.extra`
     if (typeof handler === 'function') {
-      additionalErr = handler(err)
+      _additionalErr = handler(err)
 
-      if (typeof additionalErr !== 'object' || Array.isArray(additionalErr)) {
+      if (typeof _additionalErr !== 'object' || Array.isArray(_additionalErr)) {
         throw genericError.create('error handler >')(
           'additional handler should return object',
           {
-            additionalErr
+            _additionalErr
           }
         )
       }
     }
 
     if (mode !== 'production') {
-      const args = [message, {
+      const _args = [_message, {
         ...err,
-        ...additionalErr
+        ..._additionalErr
       }, err.stack]
 
       if (typeof externalLogger === 'function') {
-        externalLogger(...args)
+        externalLogger(..._args)
       } else {
-        const options = {
+        const _options = {
           css: style,
           name,
           expanded,
           trace
         }
 
-        logger.extra(options)(...args)
+        logger.extra(_options)(..._args)
       }
     }
 
