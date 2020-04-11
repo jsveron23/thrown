@@ -25,7 +25,7 @@ function createLogger ({
     console[_group](`%c${name}`, css)
     console.log(`${title}: `, payload)
 
-    if (trace && !nativeStack) {
+    if (trace) {
       console.trace()
     }
 
