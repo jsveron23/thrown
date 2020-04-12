@@ -1,12 +1,10 @@
 on:
   push:
     paths:
-      - "src/**/*.js"
-      - "test/**/*.js"
+    - "**/*.js"
   pull_request:
     paths:
-      - "src/**/*.js"
-      - "test/**/*.js"
+    - "**/*.js"
 
 name: Coveralls
 
