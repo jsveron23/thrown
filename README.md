@@ -40,9 +40,7 @@ Basically, you don't need to use this module unless want to use extra features. 
 ## Example
 
 ```js
-// logger function is optional
-// logger => internal logger
-import errorHandler, { genericError, logger } from 'thrown'
+import errorHandler, { genericError } from 'thrown'
 
 // generic usage
 try {
