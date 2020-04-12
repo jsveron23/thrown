@@ -19,7 +19,7 @@ function createError (options) {
    * @param  {Object?} [props={}]
    * @return {Error}
    */
-  return (message, props = {}) => {
+  return (message, props) => {
     message = message || 'undefined message'
     props = props || {}
 
