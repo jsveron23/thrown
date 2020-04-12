@@ -1,5 +1,6 @@
 module.exports = {
-  include: ['src/**'],
+  include: ['src/**/*.js'],
+  exclude: ['**/index.js'],
   'check-coverage': true,
   'per-file': true,
   branches: 80,

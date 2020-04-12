@@ -7,9 +7,9 @@
     "clean": "rimraf public",
     "build": "rollup --config ./rollup.config.js",
     "prepare": "npm run clean && npm run build",
-    "test": "cross-env NODE_ENV=test ava",
-    "test:watch": "cross-env NODE_ENV=test ava --watch",
-    "coverage": "cross-env NODE_ENV=test nyc ava",
+    "test": "ava",
+    "test:watch": "ava --watch",
+    "coverage": "nyc ava",
     "release": "standard-version"
   },
   "keywords": [
@@ -42,7 +42,6 @@
     "@babel/preset-env": "^7.9.0",
     "ava": "^3.5.2",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-istanbul": "^6.0.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.1",
