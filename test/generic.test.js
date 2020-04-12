@@ -4,7 +4,7 @@ import genericError from '../src/generic'
 test('should be applied options as prefix', (t) => {
   const prefix = 'this is prefix'
   const message = 'this is message'
-  const executed = genericError.create(prefix)(message, {})
+  const executed = genericError.create(prefix)(message)
 
   t.is(executed.message, `${prefix} ${message}`)
 })

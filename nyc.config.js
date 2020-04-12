@@ -8,8 +8,8 @@ module.exports = {
   lines: 80,
   functions: 80,
   statements: 80,
-  sourceMap: true,
+  sourceMap: false,
   instrument: true,
-  cache: true,
+  cache: false,
   all: false
 }
