@@ -14,16 +14,13 @@ module.exports = {
   plugins: ['@babel/plugin-proposal-object-rest-spread'],
   env: {
     test: {
-      presets: [
-        [
-          '@babel/preset-env',
-          {
-            targets: {
-              chrome: '70',
-              ie: '11'
-            }
-          }
-        ]
+      plugins: [
+        ['istanbul', {
+          useInlineSourceMaps: false,
+          exclude: [
+            '**/*.test.js'
+          ]
+        }]
       ]
     }
   }
