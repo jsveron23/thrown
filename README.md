@@ -8,9 +8,11 @@ npm i thrown
 
 Simply, we can use [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) objects but I have published as NPM module. To reduce code and to display fancy,
 
+## Usage
+
+- original
+
 ```js
-// original way to throw err
-// and to add additional data
 try {
   const err = new Error('this is a message')
   err.extra = 'additional data'
@@ -19,8 +21,11 @@ try {
 } catch (err) {
   customErrorHandler(err)
 }
+```
 
-// thrown
+- thrown
+
+```js
 import errorHandler, { genericError } from 'thrown'
 
 try {
