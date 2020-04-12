@@ -12,15 +12,17 @@ import logger from './logger'
  * @param  {Function?} options.handler additional handler
  * @return {Function}
  */
-function createErrorHandler ({
-  mode = process.env.NODE_ENV,
-  style = '',
-  name = '<thrown>',
-  expanded = true,
-  trace = false,
-  externalLogger,
-  handler
-} = {}) {
+function createErrorHandler (options) {
+  const {
+    mode = process.env.NODE_ENV,
+    style = '',
+    name = '<thrown>',
+    expanded = true,
+    trace = false,
+    externalLogger,
+    handler
+  } = options || {}
+
   /**
    * @param  {Error} err
    * @return {Error}

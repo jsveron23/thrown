@@ -1,4 +1,4 @@
-# thrown [![npm](https://img.shields.io/npm/v/thrown.svg)](https://www.npmjs.com/package/thrown) [![npm](https://img.shields.io/npm/l/thrown.svg)](https://www.npmjs.com/package/thrown)
+# thrown [![npm](https://img.shields.io/npm/v/thrown.svg)](https://www.npmjs.com/package/thrown) [![npm](https://img.shields.io/npm/l/thrown.svg)](https://www.npmjs.com/package/thrown) ![coveralls](https://github.com/jsveron23/thrown/workflows/coveralls/badge.svg)
 
 Generic Error handler
 
@@ -8,9 +8,11 @@ npm i thrown
 
 Simply, we can use [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) objects but I have published as NPM module. To reduce code and to display fancy,
 
+## Usage
+
+- original
+
 ```js
-// original way to throw err
-// and to add additional data
 try {
   const err = new Error('this is a message')
   err.extra = 'additional data'
@@ -19,8 +21,11 @@ try {
 } catch (err) {
   customErrorHandler(err)
 }
+```
 
-// thrown
+- thrown
+
+```js
 import errorHandler, { genericError } from 'thrown'
 
 try {
@@ -35,9 +40,7 @@ Basically, you don't need to use this module unless want to use extra features. 
 ## Example
 
 ```js
-// logger function is optional
-// logger => internal logger
-import errorHandler, { genericError, logger } from 'thrown'
+import errorHandler, { genericError } from 'thrown'
 
 // generic usage
 try {
