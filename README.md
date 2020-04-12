@@ -1,4 +1,4 @@
-# thrown [![npm](https://img.shields.io/npm/v/thrown.svg)](https://www.npmjs.com/package/thrown) [![npm](https://img.shields.io/npm/l/thrown.svg)](https://www.npmjs.com/package/thrown) ![coveralls](https://github.com/jsveron23/thrown/workflows/coveralls/badge.svg)
+# thrown [![npm](https://img.shields.io/npm/v/thrown.svg)](https://www.npmjs.com/package/thrown) [![npm](https://img.shields.io/npm/l/thrown.svg)](https://www.npmjs.com/package/thrown) [![Coverage Status](https://coveralls.io/repos/github/jsveron23/thrown/badge.svg?branch=master)](https://coveralls.io/github/jsveron23/thrown?branch=master)
 
 Generic Error handler
 
