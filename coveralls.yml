@@ -1,4 +1,12 @@
-on: ["push", "pull_request"]
+on:
+  push:
+    paths:
+      - "src/**/*.js"
+      - "test/**/*.js"
+  pull_request:
+    paths:
+      - "src/**/*.js"
+      - "test/**/*.js"
 
 name: Coveralls
 
