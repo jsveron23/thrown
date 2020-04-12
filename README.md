@@ -10,7 +10,7 @@ Simply, we can use [Error](https://developer.mozilla.org/en-US/docs/Web/JavaScri
 
 ## Usage
 
-- original
+**common usage**
 
 ```js
 try {
@@ -23,7 +23,7 @@ try {
 }
 ```
 
-- thrown
+**use by `thrown`**
 
 ```js
 import errorHandler, { genericError } from 'thrown'
@@ -35,31 +35,25 @@ try {
 }
 ```
 
-Basically, you don't need to use this module unless want to use extra features. You can check out below,
+Basically, you won't need this module but `thrown` have additional features to make error handler fancy. You can check out below,
 
 ## Example
 
 ```js
 import errorHandler, { genericError } from 'thrown'
 
-// generic usage
-try {
-  throw genericError('this is a message', { extra1: 1, extra2: 2 })
-} catch (err) {
-  errorHandler(err)
-}
-
 // use options <case 1>
 try {
+  // prefix
   // or `genericError.create({ prefix: 'A API >' });`
-  const aApiGenericError = genericError.create('A API >');
+  const appliedPrefix = genericError.create('A API >');
 
   if (condition 1) {
-    throw aApiGenericError('this is first message', { extra1: 1, extra2: 2 })
+    throw appliedPrefix('this is first message', { extra1: 1, extra2: 2 })
   }
 
   if (condition 2) {
-    throw aApiGenericError('this is second message', { extra1: 1, extra2: 2 })
+    throw appliedPrefix('this is second message', { extra1: 1, extra2: 2 })
   }
 } catch (err) {
   errorHandler(err)
@@ -70,7 +64,7 @@ try {
   throw genericError('this is message', { extra1: 1, extra2: 2 })
 } catch (err) {
   errorHandler.extra({
-    // if set `externalLogger`, no use internal logger
+    // if set `externalLogger`, then no more using internal logger
     // internal logger uses `console.group`
     externalLogger: (message, err, stack) => {
       console.log(message, err);
@@ -78,6 +72,7 @@ try {
     },
 
     // additional information
+    // it can be useful when `throw` syntax from another function scope
     handler: (err) => {
       // compute something
 
