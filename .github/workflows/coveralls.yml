@@ -6,7 +6,7 @@ on:
     paths:
     - "**/*.js"
 
-name: Coveralls
+name: coveralls
 
 jobs:
 
