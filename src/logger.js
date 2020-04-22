@@ -1,14 +1,14 @@
 /**
  * Create logger
  * @param  {Object?}  [options={}]
- * @param  {String?}  [options.css='background: rgb(30, 0, 0); color: rgb(217, 89, 93)']
+ * @param  {String?}  [options.css='background: rgb(30, 0, 0); color: rgb(217, 89, 93);']
  * @param  {String?}  [options.name=''] name of group
  * @param  {Boolean?} [options.expanded=true]
  * @param  {Boolean?} [options.trace=false]
  * @return {Function}
  */
 function createLogger ({
-  css = 'background: rgb(30, 0, 0); color: rgb(217, 89, 93)',
+  css = 'background: rgb(30, 0, 0); color: rgb(217, 89, 93);',
   name = '',
   expanded = true,
   trace = false

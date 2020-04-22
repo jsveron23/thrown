@@ -9,7 +9,7 @@ test('should be applied default options as expected', (t) => {
   const executed = logger(title, {})
 
   t.deepEqual(executed.options, {
-    css: 'background: rgb(30, 0, 0); color: rgb(217, 89, 93)',
+    css: 'background: rgb(30, 0, 0); color: rgb(217, 89, 93);',
     name: '',
     expanded: true,
     trace: false
