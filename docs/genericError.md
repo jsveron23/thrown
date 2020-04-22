@@ -28,8 +28,8 @@ try {
 ```js
 import { genericError } from 'thrown'
 
-const aPrefix = genericError({ prefix: 'A -' })
-const bPrefix = genericError('B -')
+const aPrefix = genericError.create({ prefix: 'A -' })
+const bPrefix = genericError.create('B -')
 const args = ['this is a message', { data: 'additional data' }]
 
 try {

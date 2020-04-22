@@ -28,7 +28,7 @@ logger('this is a title', { prop: 'this is a property of payload' })
 ```js
 import { logger } from 'thrown'
 
-logger({
+logger.extra({
   css: 'background: #567;',
   name: 'DEBUG:',
   expanded: false,
